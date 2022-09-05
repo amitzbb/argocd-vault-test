@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret-noargo-helm-bindid-values-path
+  annotations:
+    avp.kubernetes.io/path: "kv_delivery/data/{{ .Values.path }}"
+type: Opaque
+stringData:
+  # TOKEN: <enc_key>
+  TOKEN: <PINPOINT_AWS_ACCESS_KEY>
